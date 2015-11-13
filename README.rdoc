@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+* Ref link website 
+* http://www.sitepoint.com/build-online-store-rails/
+* and use redis save session and user plugin share_social_button
+* https://github.com/huacnlee/social-share-button
