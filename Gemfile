@@ -51,5 +51,14 @@ group :development, :production, :test do
   gem 'hiredis','~> 0.4.5'
 
   gem 'social-share-button'
+
+  gem 'carrierwave'
+
+  gem 'braintree','~>2.33.1'
+
+  gem 'figaro','~>0.7.0'
+
+  gem 'gon', '~> 5.1.2'
+  
 end
 

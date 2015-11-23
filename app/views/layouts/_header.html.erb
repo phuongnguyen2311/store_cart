@@ -15,14 +15,15 @@
       <section class="top-bar-section">
         <ul class="right">
           <%if signed_in?%>
-            <li>
+            <li >
               <%= link_to cart_path do%>
                 <i class="fi-shopping-cart"></i>
                 My Cart
                 (<span class="cart-count"><%=current_user.cart_count%></span>)
               <%end%>
             </li>
-            <li><%=link_to current_user.email, edit_user_registration_path%></li>
+            <li class="user-login">
+            <%=link_to current_user.email, edit_user_registration_path%> <%= image_tag asset_path("avatar1.jpg") %></li>
             <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
           <%else%>
             <li><%=link_to "Register", new_user_registration_path%></li>

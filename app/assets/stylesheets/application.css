@@ -21,3 +21,10 @@
  	background: #333333;
  	color: white;
  }
+ .right .user-login{
+ 	display: inline-block;
+ }
+  .right .user-login a{
+ 	display: inline;
+    margin: -15px;
+ }

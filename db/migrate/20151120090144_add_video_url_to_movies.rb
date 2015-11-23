@@ -1,4 +1,4 @@
-class AddVideoIdToMovie < ActiveRecord::Migration
+class AddVideoUrlToMovies < ActiveRecord::Migration
   def change
     add_column :movies, :video_url, :string
   end

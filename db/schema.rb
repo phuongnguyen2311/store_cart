@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151113064238) do
+ActiveRecord::Schema.define(version: 20151123050056) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title",        limit: 255
@@ -23,7 +23,17 @@ ActiveRecord::Schema.define(version: 20151113064238) do
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "video_id",     limit: 255
+    t.string   "video_url",    limit: 255
   end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "movie_id",   limit: 4
+    t.integer  "buyer_id",   limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "purchases", ["movie_id", "buyer_id"], name: "index_purchases_on_movie_id_and_buyer_id", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -38,6 +48,7 @@ ActiveRecord::Schema.define(version: 20151113064238) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "avatar",                 limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
